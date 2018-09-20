@@ -1,0 +1,33 @@
+Pilpeline {
+			Agent any
+			Stages{
+			
+						Stage ('Build') {
+								
+								steps { 
+											echo 'running build phase'
+								}
+						}
+						
+						Stage ('Test') {
+								
+								steps { 
+											echo 'running Test phase'
+								}
+						
+						}
+						
+						Stage ('Deploy') {
+						
+								steps { 
+											echo 'running Deploy phase'
+								}
+						
+						}
+						
+			}
+
+}
+
+
+
