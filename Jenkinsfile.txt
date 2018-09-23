@@ -1,15 +1,15 @@
-Pilpeline {
-			Agent any
-			Stages{
+pilpeline {
+			agent any
+			stages{
 			
-						Stage ('Build') {
+						stage ('Build') {
 								
 								steps { 
 											echo 'running build phase'
 								}
 						}
 						
-						Stage ('Test') {
+						stage ('Test') {
 								
 								steps { 
 											echo 'running Test phase'
@@ -17,7 +17,7 @@ Pilpeline {
 						
 						}
 						
-						Stage ('Deploy') {
+						stage ('Deploy') {
 						
 								steps { 
 											echo 'running Deploy phase'
