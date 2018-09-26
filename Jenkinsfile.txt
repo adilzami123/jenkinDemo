@@ -3,16 +3,14 @@ pipeline {
 			stages{
 			
 						stage ('Build') {
-								
-								steps { 
-									git 'https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-helloWorld'
+							git 'https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-helloWorld'
 									
 								}
-								steps { 
+						stage ('compile-package') { 
 								sh 'mvn package'	
 									
 								}
-						}
+						
 						
 						stage ('Test') {
 								
