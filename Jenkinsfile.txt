@@ -5,7 +5,12 @@ pipeline {
 						stage ('Build') {
 								
 								steps { 
-											echo 'running build phase'
+									git 'https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-helloWorld'
+									
+								}
+								steps { 
+								sh 'mvn package'	
+									
 								}
 						}
 						
