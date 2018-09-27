@@ -1,4 +1,7 @@
 pipeline {
+environment {
+     mvnHome = "tool name: 'maven', type: 'maven'"
+   }
 			agent any
 			stages{
 			
@@ -11,13 +14,13 @@ pipeline {
 								}
 									
 						}
-						stage ('Get maven home path') { 
+						/*stage ('Get maven home path') { 
 						
 							steps {
 								def mvnHome = tool name: 'maven', type: 'maven'
 																
   							}
-						}
+						}*/
 						stage ('compile-package') { 
 							steps {
 								//def mvnHome = tool name: 'maven', type: 'maven'
