@@ -24,8 +24,8 @@ environment {
 						stage ('compile-package') { 
 							steps {
 								//def mvnHome = tool name: 'maven', type: 'maven'
-								sh "${mvnHome}/bin/mvn package"
-								
+								//sh "${mvnHome}/bin/mvn package"
+								${mvnHome}/bin/mvn package
   							}
 									
 								
