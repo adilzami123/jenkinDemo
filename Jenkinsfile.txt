@@ -11,7 +11,7 @@ pipeline {
 								}
 									
 						}
-						stage ('compile-package') { 
+						stage ('Get maven home path') { 
 						
 							steps {
 								//Get maven home path
@@ -19,6 +19,8 @@ pipeline {
 								//sh "${mvnHome}/bin/mvn package"
 								
   							}
+						}
+						stage ('compile-package') { 
 							steps {
 								//def mvnHome = tool name: 'maven', type: 'maven'
 								sh "${mvnHome}/bin/mvn package"
