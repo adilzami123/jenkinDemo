@@ -3,6 +3,11 @@ environment {
      mvnHome = "tool name: 'maven', type: 'maven'"
    }
 			agent any
+			tools {
+			maven 'Maven 3.3.9'
+			jdk 'jdk8'
+			
+			}
 			stages{
 			
 						stage ('check-out') {
